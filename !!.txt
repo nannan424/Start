@@ -1,0 +1,14 @@
+   RotateAnimation animation = new RotateAnimation(0, 360,
+                Animation.RELATIVE_TO_SELF,
+                0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+       animation.setDuration(3000);//执行时间
+       animation.setFillAfter(true);//保持状态
+        animation.setRepeatCount(-1);//执行次数-1无限次
+        animation.setInterpolator(new LinearInterpolator());
+        mImg.startAnimation(animation);//启动
+
+   <item name="android:statusBarColor">#00ffffff</item>
+//分割线
+  rel.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
+
+new RequestOptions().circleCrop())
