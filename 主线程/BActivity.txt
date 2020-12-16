@@ -1,0 +1,4 @@
+//发送者 
+
+ EventBus.getDefault().post("！！！！");
+//                   startActivity(new Intent(BActivity.this,MainActivity.class));

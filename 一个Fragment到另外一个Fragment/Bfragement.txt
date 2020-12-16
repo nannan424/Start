@@ -1,0 +1,6 @@
+    public void setData(DatasBean datasBean) {
+        if (mAdapter != null){
+            mAdapter.mList.add(datasBean);
+            mAdapter.notifyDataSetChanged();
+        }
+    }

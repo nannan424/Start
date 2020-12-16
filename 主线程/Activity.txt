@@ -1,0 +1,21 @@
+  //先注册
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+
+    @Subscribe(threadMode = MAIN)//主线程
+    public void aaa(String mag) {
+//        Toast.makeText(this, mag, Toast.LENGTH_SHORT).show();
+        Log.d("mag","mag"+mag);
+
+
+ @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            default:
+                break;
+            case R.id.tv:
+                startActivity(new Intent(this,BActivity.class));//跳转到发送者那边
+                break;
+        }
+    }

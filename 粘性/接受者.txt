@@ -1,0 +1,21 @@
+  @Subscribe(sticky = true)
+    public void baby(Info.DataBean.DatasBean datasBeans ){
+       list.add(datasBeans);
+       rvAdapter.notifyDataSetChanged();
+    }
+
+//注册
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        EventBus.getDefault().register(this);
+
+        initView(getView());
+
+    }
+//销毁
+    @Override
+    public void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }

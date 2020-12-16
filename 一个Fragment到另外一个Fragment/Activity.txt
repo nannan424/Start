@@ -1,0 +1,22 @@
+   @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        initView();
+        if (!EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+
+    @Subscribe
+    public void receive(DatasBean datasBean){
+        MeFragment fragment = (MeFragment) mFragments.get(1);
+        fragment.setData(datasBean);//给fragment传值
+    }

@@ -1,0 +1,8 @@
+     case R.id.btn:
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        EventBus.getDefault().post("！！！！");
+                        startActivity(new Intent(BActivity.this,MainActivity.class));
+                    }
+                }).start();
